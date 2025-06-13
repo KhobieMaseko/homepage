@@ -14,7 +14,7 @@ Visit the live site: [khobiemaseko.github.io/homepage](https://khobiemaseko.gith
 ## 🚀 Features
 
 - ⚡ **Responsive Design** – Fully optimized for desktop, tablet, and mobile.
-- 🎨 **Modern Aesthetic** – Sleek black theme with orange accents.
+- 🎨 **Modern Aesthetic** – Sleek black theme with yellow accents.
 - 🖱️ **Interactive Cursor** – Magnetic distortion effect on hover.
 - 🎥 **Video Background** – Project section with subtle looping video.
 - ✨ **Dynamic Rendering** – Projects are rendered from JavaScript objects.
