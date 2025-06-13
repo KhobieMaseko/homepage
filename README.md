@@ -1,7 +1,6 @@
-# Developer Portfolio – Khobie Maseko
+# Developer Portfolio
 
 Welcome to my personal portfolio website, designed and developed as part of [The Odin Project](https://www.theodinproject.com/) curriculum. 
-This homepage showcases who I am, what I build, and how to get in touch.
 
 Visit the live site: [khobiemaseko.github.io/homepage](https://khobiemaseko.github.io/homepage)
 
