@@ -4,9 +4,11 @@ Welcome to my personal portfolio website, designed and developed as part of [The
 
 Visit the live site: [khobiemaseko.github.io/homepage](https://khobiemaseko.github.io/homepage)
 
-![homepage1](https://github.com/user-attachments/assets/1a833209-e894-4a62-845a-64f3b43d1f71)
+![homepage3](https://github.com/user-attachments/assets/b8739269-434d-4e6a-b9e7-8c4e445a8ce1)
 
-![homepage2](https://github.com/user-attachments/assets/36fc9858-27bb-4110-a517-579ad846c9a3)
+![homepage4](https://github.com/user-attachments/assets/39dcca85-c80e-4306-a4d7-c27b76cd4629)
+
+![homepage5](https://github.com/user-attachments/assets/d628c2c5-9a9c-4061-a8c1-031072a84716)
 
 
 ---
