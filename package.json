@@ -2,12 +2,15 @@
   "name": "homepage",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://KhobieMaseko.github.io/homepage",
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "test": "jest",
     "lint": "eslint src/js/**/*.js",
-    "format": "prettier --write src/**/*.{js,scss,html}"
+    "format": "prettier --write src/**/*.{js,scss,html}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +25,7 @@
     "devicon": "^2.16.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^30.0.0",
     "postcss-loader": "^8.1.1",

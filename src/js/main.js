@@ -1,6 +1,8 @@
 // Import SCSS
 import '../styles/main.scss';
 
+import loaderGif from '../images/loader.gif';
+
 // Import images
 import project1Image from '../images/project1.png';
 import project2Image from '../images/project2.png';
@@ -8,6 +10,13 @@ import project3Image from '../images/project3.png';
 
 // Import video
 import techVideo from '../images/0_Technology_Data_Visualization_1920x1080.mp4';
+
+// Import tech stack icons
+import html5Icon from '../images/html5.svg';
+import css3Icon from '../images/css3.svg';
+import jsIcon from '../images/javascript.svg';
+import npmIcon from '../images/npm.svg';
+import webpackIcon from '../images/webpack.svg';
 
 // Custom cursor initialization
 const initCursor = () => {
@@ -21,11 +30,10 @@ const initCursor = () => {
     cursor.style.top = `${e.clientY}px`;
     cursor.style.opacity = 1;
 
-  // Restart distort animation
+    // Restart distort animation
     cursor.classList.remove('distort');
     void cursor.offsetWidth;
     cursor.classList.add('distort');
-
   });
 
   // Click animation
@@ -45,14 +53,37 @@ const initCursor = () => {
 
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', () => {
-  initCursor(); // initialize custom cursor
+  // Preloader image injection
+  const preloaderImg = document.getElementById('preloader-img');
+  if (preloaderImg) {
+    preloaderImg.src = loaderGif;
+  }
+
+  // initialize custom cursor
+  initCursor();
 
   // Set current year in footer
   document.querySelector('footer p').innerHTML = `Designed & Built by Khobie Maseko &copy; ${new Date().getFullYear()}`;
 
+  // Add tech stack icons
+  const contactContainer = document.querySelector('.contact .container');
+  if (contactContainer) {
+    const techIcons = [html5Icon, css3Icon, jsIcon, npmIcon, webpackIcon];
+
+    const techStackDiv = document.createElement('div');
+    techStackDiv.className = 'tech-stack-icons';
+    techStackDiv.setAttribute('aria-label', 'Technologies I use');
+
+    techStackDiv.innerHTML = techIcons
+      .map(icon => `<img src="${icon}" alt="Tech Icon" loading="lazy">`)
+      .join('');
+
+    contactContainer.appendChild(techStackDiv);
+  }
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
@@ -64,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add video background to projects section
+  // video background to projects section
   const projectsSection = document.querySelector('.projects');
   if (projectsSection) {
     projectsSection.insertAdjacentHTML('afterbegin', `
@@ -94,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'A responsive Library portfolio website built with modern web technologies.',
         image: project2Image,
         tech: ['HTML', 'SCSS', 'JavaScript'],
-        liveLink: '#',
-        codeLink: 'https://github.com/KhobieMaseko'
+        liveLink: 'https://khobiemaseko.github.io/Library/',
+        codeLink: 'https://github.com/KhobieMaseko/Library'
       },
       {
         title: 'Weather App',
@@ -133,6 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
       projectsGrid.appendChild(projectCard);
     });
   }
+});
+
+// When everything is fully loaded, hide the preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) preloader.style.display = 'none';
 });
 
 // Intersection Observer for animations
